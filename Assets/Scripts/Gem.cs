@@ -119,7 +119,7 @@ public class Gem : MonoBehaviour
 
         if (Cell != null)
         {
-            if (transform.localPosition.y + m_Rig.velocity.y * Time.fixedDeltaTime <
+            if (transform.localPosition.y + m_Rig.linearVelocity.y * Time.fixedDeltaTime <
                 Cell.transform.localPosition.y)
                 Land();
 
@@ -151,7 +151,7 @@ public class Gem : MonoBehaviour
     {
         do
         {
-            m_Rig.velocity = velocity;
+            m_Rig.linearVelocity = velocity;
 
             time -= Time.fixedDeltaTime;
 
@@ -166,7 +166,7 @@ public class Gem : MonoBehaviour
             return;
 
         m_Rig.bodyType = RigidbodyType2D.Kinematic;
-        m_Rig.velocity = Vector2.zero;
+        m_Rig.linearVelocity = Vector2.zero;
 
         transform.localPosition = Cell.transform.localPosition;
 
@@ -362,7 +362,7 @@ public class Gem : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         m_Rig.constraints = RigidbodyConstraints2D.FreezeRotation;
         m_Rig.simulated = true;
-        m_Rig.velocity = new Vector2(0, 9) + Random.insideUnitCircle * 3.34f;
+        m_Rig.linearVelocity = new Vector2(0, 9) + Random.insideUnitCircle * 3.34f;
         m_Rig.gravityScale = 2.7f;
     }
 

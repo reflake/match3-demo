@@ -415,7 +415,8 @@ public class Field : MonoBehaviour
             {
                 Gem gem = g.GetComponent<Gem>();
 
-                gem.StartCoroutine(gem.Clear());
+                if (gem)
+                    gem.Clear();
             }
         }
     }

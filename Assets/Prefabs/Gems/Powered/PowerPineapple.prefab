@@ -70,6 +70,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
+      propertyPath: worth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
+      propertyPath: _worth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
+      propertyPath: gemType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
+      propertyPath: _gemType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
       propertyPath: m_GemType
       value: 7
       objectReference: {fileID: 0}

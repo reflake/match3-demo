@@ -10,6 +10,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5432201231594195330, guid: 6e03fd9391c3bf64490217790f012403,
         type: 3}
+      propertyPath: worth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432201231594195330, guid: 6e03fd9391c3bf64490217790f012403,
+        type: 3}
+      propertyPath: _worth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432201231594195330, guid: 6e03fd9391c3bf64490217790f012403,
+        type: 3}
       propertyPath: m_DefaultGatherEvent
       value: 0
       objectReference: {fileID: 0}

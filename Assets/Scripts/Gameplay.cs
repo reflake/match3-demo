@@ -294,7 +294,7 @@ public class Gameplay : MonoBehaviour
 
     void OnGemGathered(Gem gem)
     {
-        m_GemCount += gem.m_Worth;
+        m_GemCount += gem.Worth;
 
         if (m_GemCounter == null)
             return;
@@ -334,7 +334,7 @@ public class Gameplay : MonoBehaviour
                 Gem powerGem = null;
 
                 foreach (Gem g in m_PowerGems)
-                    if (g.m_GemType == root.m_GemType)
+                    if (g.GemType == root.GemType)
                         powerGem = g;
 
                 if (powerGem == null)
@@ -347,14 +347,14 @@ public class Gameplay : MonoBehaviour
                 foreach (Gem gem in streak)
                 {
                     otherGems[i++] = gem;
-                    totalWorth += gem.m_Worth;
+                    totalWorth += gem.Worth;
                 }
 
                 powerGem = Instantiate(powerGem, transform);
 
                 powerGem.GetComponent<Gem>().Cell = root.Cell;
                 powerGem.transform.localPosition = root.transform.localPosition;
-                powerGem.m_Worth = totalWorth;
+                powerGem.Worth = totalWorth;
 
                 //Destroy(root);
                 powerGem.GetComponent<Gem>().MergeGems(otherGems);

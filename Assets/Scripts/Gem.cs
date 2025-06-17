@@ -1,40 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-// Теперь уже правда не самоцветы а фрукты
-// но не могу поменять полностью код
+public enum Gems
+{
+    Unknown = 0,
+    Apple,
+    Orange,
+    Grape,
+    Banana,
+    Cherry,
+    Watermelon,
+    Pineapple,
+    Hyperstone,
+}
+
 public class Gem : MonoBehaviour
 {
-    #region "Classes/Types"
-
-    public enum Gems
-    {
-        Unknown = 0,
-        Apple,
-        Orange,
-        Grape,
-        Banana,
-        Cherry,
-        Watermelon,
-        Pineapple,
-        Hyperstone,
-    }
-
-    #endregion
-    #region "Fields"
-
-    public Gems m_GemType = Gems.Unknown;
-    public int m_Worth = 1;
-
-    private Player m_Ply;
-    private Animator m_Animator;
-    private Collider2D m_Collider;
-    private IdleChecker m_IdleChecker;
-    private SpriteRenderer m_Sprite;
-    private Rigidbody2D m_Rig;
-
-    private Vector3 m_rootPosition;
+    [SerializeField] private Gems gemType = Gems.Unknown;
+    [SerializeField] private int worth = 1;
+    [SerializeField] private Cell cell = null;
 
     public bool Gathered { get; private set; } = false;
 
@@ -43,19 +30,18 @@ public class Gem : MonoBehaviour
     public bool Swapping { get; private set; } = false;
 
     public bool IsIdle { get {
-            return m_IdleChecker.m_Idle &&
-                m_Rig.bodyType == RigidbodyType2D.Kinematic;
+            return _idleChecker.m_Idle &&
+                _rig.bodyType == RigidbodyType2D.Kinematic;
         }
     }
 
-    public Cell m_Cell = null;
     public Cell Cell {
-        get { return m_Cell; }
+        get { return cell; }
         set {
-            if (m_Cell != null && m_Cell.Gem == this)
-                m_Cell.Gem = null;
+            if (cell != null && cell.Gem == this)
+                cell.Gem = null;
 
-            m_Cell = value;
+            cell = value;
 
             if (value != null)
             {
@@ -67,43 +53,33 @@ public class Gem : MonoBehaviour
 
     public int Column { get; set; }
 
-    private SoundPlayer m_sndPlayer;
-
-    private float m_LandTime;
-
-    private GameObject m_Field;
-
     public bool TurnTag { get; set; } = false;
+    
+    public int Worth { get => worth; set => worth = value; }
+    public Gems GemType => gemType;
 
-    #endregion
-    #region "Functions/Methods"
+    private Animator _animator;
+    private Collider2D m_Collider;
+    private IdleChecker _idleChecker;
+    private Rigidbody2D _rig;
+    private SoundPlayer _sndPlayer;
+    private GameObject _field;
+
+    private Vector3 _rootPosition;
+    private float m_LandTime;
 
     protected void Awake()
     {
-        m_Ply = GameObject.FindGameObjectWithTag("Player").
-            GetComponent<Player>();
+        _animator = GetComponent<Animator>();
 
-        m_Animator = GetComponent<Animator>();
+        _idleChecker = _animator.GetBehaviour<IdleChecker>();
+        _idleChecker.m_GemScript = this;
 
-        m_IdleChecker = m_Animator.GetBehaviour<IdleChecker>();
-        m_IdleChecker.m_GemScript = this;
-
-        m_Sprite = GetComponentInChildren<SpriteRenderer>();
-
-        m_Rig = GetComponent<Rigidbody2D>();
-
-        m_sndPlayer = GameObject.Find("SoundPlayer").GetComponent<SoundPlayer>();
-
-        m_Field = GameObject.Find("Field");
+        _rig = GetComponent<Rigidbody2D>();
+        _sndPlayer = FindFirstObjectByType<SoundPlayer>();
+        _field = GameObject.Find("Field");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Swapping)
@@ -119,14 +95,14 @@ public class Gem : MonoBehaviour
 
         if (Cell != null)
         {
-            if (transform.localPosition.y + m_Rig.linearVelocity.y * Time.fixedDeltaTime <
+            if (transform.localPosition.y + _rig.linearVelocity.y * Time.fixedDeltaTime <
                 Cell.transform.localPosition.y)
                 Land();
 
             Bottomtest();
         }
         else
-            m_Rig.bodyType = RigidbodyType2D.Dynamic;
+            _rig.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Bottomtest()
@@ -137,7 +113,7 @@ public class Gem : MonoBehaviour
         if (Cell.Bottom != null &&
             Cell.Bottom.Gem == null)
         {
-            m_Rig.bodyType = RigidbodyType2D.Dynamic;
+            _rig.bodyType = RigidbodyType2D.Dynamic;
 
             if (Cell.Top != null &&
                 Cell.Top.Gem != null)
@@ -151,7 +127,7 @@ public class Gem : MonoBehaviour
     {
         do
         {
-            m_Rig.linearVelocity = velocity;
+            _rig.linearVelocity = velocity;
 
             time -= Time.fixedDeltaTime;
 
@@ -162,21 +138,20 @@ public class Gem : MonoBehaviour
     void Land()
     {
         // уже приземлились и неподвижны
-        if (m_Rig.bodyType == RigidbodyType2D.Kinematic)
+        if (_rig.bodyType == RigidbodyType2D.Kinematic)
             return;
 
-        m_Rig.bodyType = RigidbodyType2D.Kinematic;
-        m_Rig.linearVelocity = Vector2.zero;
+        _rig.bodyType = RigidbodyType2D.Kinematic;
+        _rig.linearVelocity = Vector2.zero;
 
         transform.localPosition = Cell.transform.localPosition;
 
-        if (m_sndPlayer)
-            m_sndPlayer.Land();
+        if (_sndPlayer)
+            _sndPlayer.Land();
 
         m_LandTime = Time.time;
     }
 
-    // приземлился ли самоцвет недавно
     public bool LandedLately()
     {
         return Time.time < m_LandTime + 0.05f;
@@ -189,7 +164,7 @@ public class Gem : MonoBehaviour
             !Gathered &&
             !Streak &&
             !IsCollapsing() &&
-            m_Rig.bodyType == RigidbodyType2D.Kinematic;
+            _rig.bodyType == RigidbodyType2D.Kinematic;
     }
 
     public bool CanGather()
@@ -205,7 +180,7 @@ public class Gem : MonoBehaviour
     public bool CanStreak()
     {
         return !Gathered &&
-            m_Rig.bodyType == RigidbodyType2D.Kinematic;
+            _rig.bodyType == RigidbodyType2D.Kinematic;
     }
 
     public void SetStreak()
@@ -237,7 +212,7 @@ public class Gem : MonoBehaviour
             second.transform.localPosition = tmp3;
         }
 
-        m_sndPlayer.Turn();
+        _sndPlayer.Turn();
 
         this.TurnTag = true;
         second.TurnTag = true;
@@ -263,24 +238,24 @@ public class Gem : MonoBehaviour
         if (badmove)
             animation += "_invalid";
 
-        m_Animator.Play(animation, -1, 0);
-        m_IdleChecker.m_Idle = false;
+        _animator.Play(animation, -1, 0);
+        _idleChecker.m_Idle = false;
 
         Swapping = true;
     }
 
-    public bool IsMatch(Gem g)
+    public bool IsMatch(Gem gem)
     {
-        if (g == null)
+        if (gem == null)
             return false;
 
-        if (m_GemType == Gems.Hyperstone)
+        if (gemType == Gems.Hyperstone)
             return true;
 
-        if (g.m_GemType == Gems.Hyperstone)
+        if (gem.gemType == Gems.Hyperstone)
             return true;
 
-        return m_GemType == g.m_GemType;
+        return gemType == gem.gemType;
     }
 
     public bool IsNear(Gem gem)
@@ -323,63 +298,72 @@ public class Gem : MonoBehaviour
 
         Gathered = true;
 
-        m_Animator.Play("Gather", -1, 0);
+        _animator.Play("Gather", -1, 0);
 
-        Destroy(gameObject, 6.0f / 60.0f);
+        const float destructionDelay = 1.0f / 10.0f;
+        Destroy(gameObject, destructionDelay);
 
-        m_Field.SendMessage("OnGemGathered", this, SendMessageOptions.DontRequireReceiver);
+        _field.SendMessage("OnGemGathered", this, SendMessageOptions.DontRequireReceiver);
     }
 
     public void MergeGems(Gem[] otherGems)
     {
-        this.m_Rig.simulated = false;
+        this._rig.simulated = false;
 
         StartCoroutine(MergeEffect(otherGems, this));
     }
 
-    public IEnumerator Clear()
+    public void Clear()
     {
-        float t = 1.0f;
         Gathered = true;
-        m_Rig.bodyType = RigidbodyType2D.Dynamic;
-        m_Rig.simulated = false;
-        m_Animator.enabled = false;
+        _rig.bodyType = RigidbodyType2D.Dynamic;
+        _rig.simulated = false;
+        _animator.enabled = false;
 
-        do
-        {
-            t -= Time.fixedDeltaTime;
+        const float duration = 1.0f;
+        var destroySequence = DOTween.Sequence();
+        destroySequence
+            .Append(transform.DOShakePosition(duration, 0.2f, 120, fadeOut: false))
+            .AppendCallback(LaunchGem);
 
-            if (Random.Range(0, 200) == 0)
-                m_sndPlayer.Land();
+        const float soundRepeatRate = 0.1f;
+        
+        InvokeRepeating("PlayRandomSound", Random.Range(0.0f, soundRepeatRate), soundRepeatRate);
+    }
 
-            // потрясти немного самоцвет
-            m_Sprite.transform.localPosition = Random.insideUnitCircle * 0.075f;
+    void PlayRandomSound()
+    {
+        // When gem is being destroyed play a random sound every .1s
+        if (Random.Range(0, 25) == 0)
+            _sndPlayer.Land();
+    }
 
-            yield return new WaitForFixedUpdate();
-
-        } while (t >= 0.0f);
-
+    private void LaunchGem()
+    {
+        // Stop playing random sound
+        CancelInvoke("PlayRandomSound");
+        
         GetComponent<Collider2D>().enabled = false;
-        m_Rig.constraints = RigidbodyConstraints2D.FreezeRotation;
-        m_Rig.simulated = true;
-        m_Rig.linearVelocity = new Vector2(0, 9) + Random.insideUnitCircle * 3.34f;
-        m_Rig.gravityScale = 2.7f;
+        _rig.constraints = RigidbodyConstraints2D.FreezeRotation;
+        _rig.simulated = true;
+        _rig.linearVelocity = new Vector2(0, 9) + Random.insideUnitCircle * 3.34f;
+        _rig.gravityScale = 2.7f;
     }
 
     public Gem[] GetGemsAround()
     {
-        List<Gem> gems = new List<Gem>();
-        System.Action<Cell> f = (Cell cell) =>
+        List<Gem> gems = new();
+            
+        void AddGemFromCell(Cell cell)
         {
             if (cell != null && cell.Gem != null)
                 gems.Add(cell.Gem);
-        };
+        }
 
-
-        f(Cell.Top);
-        f(Cell.Left);
-        f(Cell.Bottom);
-        f(Cell.Right);
+        AddGemFromCell(Cell.Top);
+        AddGemFromCell(Cell.Left);
+        AddGemFromCell(Cell.Bottom);
+        AddGemFromCell(Cell.Right);
 
         return gems.ToArray();
     }
@@ -394,7 +378,7 @@ public class Gem : MonoBehaviour
 
         yield return new WaitForSeconds(0.225f);
 
-        this.m_Rig.simulated = true;
+        _rig.simulated = true;
     }
 
     private IEnumerator TransitionEffect(Vector3 newPosition, float duration)
@@ -402,7 +386,7 @@ public class Gem : MonoBehaviour
         Vector3 startPosition = transform.localPosition;
         float t = 0.0f;
 
-        m_Rig.simulated = false;
+        _rig.simulated = false;
 
         do
         {
@@ -418,7 +402,6 @@ public class Gem : MonoBehaviour
 
     private void OnDestroy()
     {
-
         Cell = null;
     }
 
@@ -463,7 +446,5 @@ public class Gem : MonoBehaviour
         if (cell == Cell && cell.Gem == this)
             Cell = null;
     }
-
-    #endregion
 }
 

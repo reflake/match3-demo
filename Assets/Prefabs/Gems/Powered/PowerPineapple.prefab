@@ -5,17 +5,18 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 69299333513256104, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerDiamond
+      value: PowerPineapple
       objectReference: {fileID: 0}
-    - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
+    - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
-      propertyPath: m_GemType
-      value: 7
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
@@ -34,6 +35,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -45,16 +51,6 @@ PrefabInstance:
     - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 221300784655452264, guid: c309774033cdc8c48af3a0e4469f6f2b,
@@ -72,6 +68,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2993106168984500982, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
+      propertyPath: m_GemType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828786428301144676, guid: c309774033cdc8c48af3a0e4469f6f2b,
+        type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 2145051888624967906, guid: bcfc97aa4e7cb2b459f2ec9e63a9f384,
+        type: 3}
     - target: {fileID: 9187300973506128258, guid: c309774033cdc8c48af3a0e4469f6f2b,
         type: 3}
       propertyPath: m_Sprite
@@ -84,4 +91,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c309774033cdc8c48af3a0e4469f6f2b, type: 3}

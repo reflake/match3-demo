@@ -1,32 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(Gem), typeof(SoundPlayer))]
 public class PowerGem : MonoBehaviour
 {
-    public Transform m_ExplosionPrefab;
-    private Gem m_GemScript;
-    private SoundPlayer m_sndPlayer;
+    [SerializeField] private Transform explosionPrefab;
+    
+    private Gem _gem;
+    private SoundPlayer _sndPlayer;
+    private bool _exploded = false;
 
     void Awake()
     {
         foreach (ParticleSystem emitter in GetComponentsInChildren<ParticleSystem>())
             emitter.Play();
 
-        m_GemScript = GetComponent<Gem>();
-        m_sndPlayer = GameObject.Find("SoundPlayer").GetComponent<SoundPlayer>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _gem = GetComponent<Gem>();
+        _sndPlayer = FindAnyObjectByType<SoundPlayer>();
     }
 
     private void Explode(Cell cell)
@@ -41,7 +30,7 @@ public class PowerGem : MonoBehaviour
 
         Cell top = cell.Top;
 
-        // отправить в полет блоки чуть повыше, которые были задеты взрывом
+        // Explosion knockbacks the gem on top
         while (top != null && top.Gem != null)
         {
             top.Gem.StartCoroutine(
@@ -54,21 +43,20 @@ public class PowerGem : MonoBehaviour
         Destroy(gem.gameObject);
     }
 
-    bool m_Exploded = false;
-
+    // Triggered by Gem class
     public void OnGather()
     {
-        if (m_Exploded)
+        if (_exploded)
             return;
 
-        m_sndPlayer.Explosion();
+        _sndPlayer.Explosion();
 
-        m_Exploded = true;
+        _exploded = true;
 
-        Transform explosion = Instantiate(m_ExplosionPrefab);
+        Transform explosion = Instantiate(explosionPrefab);
         Destroy(explosion.gameObject, 0.5f);
 
-        Cell cell = m_GemScript.Cell;
+        Cell cell = _gem.Cell;
         explosion.transform.position = cell.transform.position;
 
         if (cell.Top)

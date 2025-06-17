@@ -319,7 +319,7 @@ public class Gem : MonoBehaviour
         if (Gathered)
             return;
 
-        SendMessage("OnGather", SendMessageOptions.DontRequireReceiver);
+        SendMessage(nameof(PowerGem.OnGather), SendMessageOptions.DontRequireReceiver);
 
         Gathered = true;
 

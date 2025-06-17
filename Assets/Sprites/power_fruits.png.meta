@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: c74076e419fddff4cb1495d94e6936f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8351797523242166115
+    second: power_fruits_0
+  - first:
+      213: 3006993618286015994
+    second: power_fruits_1
+  - first:
+      213: -3930491594954349148
+    second: power_fruits_2
+  - first:
+      213: -6939226805109073827
+    second: power_fruits_3
+  - first:
+      213: -4187479417629223136
+    second: power_fruits_4
+  - first:
+      213: -8255571288235011953
+    second: power_fruits_5
+  - first:
+      213: -7557386783029047485
+    second: power_fruits_6
+  - first:
+      213: 2000390827301752660
+    second: power_fruits_7
+  - first:
+      213: 4954310353076437461
+    second: power_fruits_8
+  - first:
+      213: -6348067806932103595
+    second: power_fruits_9
+  - first:
+      213: -4273814954631214963
+    second: power_fruits_10
+  - first:
+      213: 11356979105974515
+    second: power_fruits_11
+  - first:
+      213: -6192484621346380717
+    second: power_fruits_12
+  - first:
+      213: 8169709416974391495
+    second: power_fruits_13
+  - first:
+      213: 2573104866089637841
+    second: power_fruits_14
+  - first:
+      213: 3689814827991266962
+    second: power_fruits_15
+  - first:
+      213: 5110232388356795859
+    second: power_fruits_16
+  - first:
+      213: -5718227789330961820
+    second: power_fruits_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: power_fruits_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557317b5fee684d48afb34d611c7b424
+      internalID: 8351797523242166115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08108d2a72c1ea478eccd0012175b19
+      internalID: 3006993618286015994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc27d4bb3efd1341b745afeafba950e
+      internalID: -3930491594954349148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f33e0960f8ed247994913fe26bbf0c
+      internalID: -6939226805109073827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5a1f2c3848a5740ae214b4ea1f5b10
+      internalID: -4187479417629223136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa304676af53c849be339b477a0923e
+      internalID: -8255571288235011953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae996e6109a9f344e912b480229f2edc
+      internalID: -7557386783029047485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f7c9d4db7aedf418b73300dedfb69b
+      internalID: 2000390827301752660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf4e76d0323cf342a33dd7e219f04db
+      internalID: 4954310353076437461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307d6faee7558304eb83db377b3ff128
+      internalID: -6348067806932103595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815a8b7077a83814399935104713434e
+      internalID: -4273814954631214963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293e180b35fb7b5478cf370d951970aa
+      internalID: 11356979105974515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_12
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf1e3fa88446434ba118ededea2e235
+      internalID: -6192484621346380717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_13
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9ee01d17a408f498d1eb0fc562bd66
+      internalID: 8169709416974391495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power_fruits_14
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79e43fcec0a00a4692d5ad51325a5d8
+      internalID: 2573104866089637841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

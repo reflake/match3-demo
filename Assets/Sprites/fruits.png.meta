@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 97ba6dea1ee900b4db1f95ca7ce6c369
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7207882119082248946
+    second: fruits_0
+  - first:
+      213: -7817259731008224619
+    second: fruits_1
+  - first:
+      213: 8459430566571322924
+    second: fruits_2
+  - first:
+      213: 1251309877831849473
+    second: fruits_3
+  - first:
+      213: -3905682121003437408
+    second: fruits_4
+  - first:
+      213: -7437742398462056877
+    second: fruits_5
+  - first:
+      213: 1288344104372508942
+    second: fruits_6
+  - first:
+      213: 7926399269539078264
+    second: fruits_7
+  - first:
+      213: -2290489026418888253
+    second: fruits_8
+  - first:
+      213: 9207172399211861186
+    second: fruits_9
+  - first:
+      213: 4592089221032965184
+    second: fruits_10
+  - first:
+      213: -8850325730853000056
+    second: fruits_11
+  - first:
+      213: 8568432717185302205
+    second: fruits_12
+  - first:
+      213: 2920479375005291679
+    second: fruits_13
+  - first:
+      213: 6083171393453419632
+    second: fruits_14
+  - first:
+      213: -1537933228773031858
+    second: fruits_15
+  - first:
+      213: -5946345899066519295
+    second: fruits_16
+  - first:
+      213: 690997131168008985
+    second: fruits_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fruits_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3093ce55aa6164c8436720e690f273
+      internalID: 7207882119082248946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fde9552dbb2b5c49b808a284fcebe72
+      internalID: -7817259731008224619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d4749918e842a4eb611a4980f86cd0
+      internalID: 8459430566571322924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7578d73f955112e418d8bc7f22383e64
+      internalID: 1251309877831849473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 186.66666
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19320d08c83d1204ca4aa667dec22068
+      internalID: -3905682121003437408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3d6091a54f1d54d8b3620fd6028338
+      internalID: -7437742398462056877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5553f7e5320fec43a06a19dbdc7234c
+      internalID: 1288344104372508942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a286ae42e1e7b6469b2829148b5a1d4
+      internalID: 7926399269539078264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06326e1c0bc59f448b3349b3243a4b1
+      internalID: -2290489026418888253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 93.666664
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9febce84c08902a45a07bcbf941f084e
+      internalID: 9207172399211861186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a477463bddbc8bd459bcefe595c7bb59
+      internalID: 4592089221032965184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27459392c927c74ababa1f55a41b809
+      internalID: -8850325730853000056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_12
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36576dd4c614d25479919da1aa7a1af7
+      internalID: 8568432717185302205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_13
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c8739d6ea92b641aec2ab17474bec6
+      internalID: 2920479375005291679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fruits_14
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0.6666641
+        width: 86
+        height: 93.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b887d3d8f9f89a14199768484b6de3dc
+      internalID: 6083171393453419632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

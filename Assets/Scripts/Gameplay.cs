@@ -176,7 +176,7 @@ public class Gameplay : MonoBehaviour
             Time.timeScale = 1.0f;
     }
 
-    void SetPause(bool value)
+    public void SetPause(bool value)
     {
         if (value == true)
             Time.timeScale = 0.0f;
